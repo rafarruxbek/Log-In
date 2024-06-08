@@ -1,0 +1,399 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap');
+:root {
+    --bg-color-light: #f0f0f0;
+    --bg-color-dark: #333;
+    --text-color-light: #000;
+    --text-color-dark: #fff;
+    --checkbox-bg-light: #ccc;
+    --checkbox-bg-dark: #666;
+    --checkbox-checked-bg-light: #4caf50;
+    --checkbox-checked-bg-dark: #66bb6a;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:'Poppins', sans-serif;
+    -webkit-tap-highlight-color: transparent;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items:center ;
+    min-height: 100vh;
+    background-color: #f0eded;
+     transition: background-color 0.2s, color 0.2s;
+}
+body::after{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(#0000ff, #ff0000);
+    clip-path: circle(20% at 10% 10%);
+    z-index: -1;
+}
+body::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background:linear-gradient(#f0f,#f00);
+    clip-path: circle(30% at right 80%);
+}
+.container{
+    display: flex;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    width: 1140px;
+    height: 693px;
+    background-color: rgba(255, 255, 255, 0.1);
+    /* border-top:1px solid rgba(255, 255, 255, 0.5) ;
+    border-left: 1px solid rgba(255, 255, 255, 0.5); */
+    box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+
+}
+.left-card{
+    width: 50%;
+    height: 100%;
+    border-right: 1px solid rgba(255, 255, 255, 0.5);
+    border-top:2px solid rgba(255, 255, 255, 0.5) ;
+    border-left: 2px solid rgba(255, 255, 255, 0.5);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 50px;
+    border-radius:20px 0px 0px 20px ;
+    background-color: rgba(255, 255, 255, 0.3);
+}
+.welcome h3{
+    font-size: 24px;
+    font-weight: 400;
+}
+.logo{
+    display: flex;
+    justify-content: center;
+}
+.logo h1{
+    font-size: 100px;
+    font-weight: 600;
+}
+.register{
+    display: flex;
+    gap: 5px;
+}
+.register p{
+    font-size: 16px;
+    font-weight: 300;
+}
+.register a{
+    font-size: 16px;
+    font-weight: 600;
+    color: #000;
+    text-decoration: none;
+}
+.register a:hover{
+    color: #000000cb;
+}
+
+.right-card{
+    display: flex;
+    flex-direction: column;
+    border-top:2px solid rgba(255, 255, 255, 0.5) ;
+    border-radius:0px 20px 20px 0px ;
+    width: 50%;
+    height: 100%;
+    padding: 50px;
+}
+.form{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+
+}
+.form-name{
+    font-size: 24px;
+    font-weight: 400;
+}
+.right-card__form{
+    display: flex;
+    flex-direction: column;
+}
+.label{
+    display: block;
+    font-size: 12px;
+    text-transform: uppercase;
+    color: #757575;
+    font-weight: 300;
+    margin-top: 25px;
+    margin-bottom: 15px;
+}
+.right-card__form input{
+    width: 100%;
+    padding: 10px;
+    border: hidden;
+    font-size: 16px;
+    font-weight: 350;
+    background-color: transparent;
+    border-bottom:2px solid #0000006c;
+}
+input:focus {
+    outline: none;
+}
+.checkbox-container {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    user-select: none;
+    font-size: 18px;
+    margin: 20px 0px;
+
+}
+
+.checkbox-container input {
+    display: none;
+}
+.checkbox-container p{
+    color: #000;
+    font-weight: 300;
+    font-size: 16px;
+}
+.checkmark {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+    border: 2px solid #757575;
+    border-radius: 3px;
+    position: relative;
+    transition: transform 0.3s ease-in-out;
+
+}
+
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+    left: 50%;
+    top: 50%;
+    width: 10px;
+    height: 10px;
+    background-color: #000;
+    border-radius: 20%;
+    transform: translate(-50%, -50%) scale(0);
+    transition: transform 0.3s ease-in-out;
+
+}
+
+.checkbox-container input:checked ~ .checkmark:after {
+    display: block;
+    transform: translate(-50%, -50%) scale(1);
+}
+.btn{
+    width: 100%;
+    height: 72px;
+    border-radius: 10px;
+    font-size: 20px;
+    cursor: pointer;
+    color: rgba(0, 0, 0, 0.8);
+    border: 2px solid #757575;
+    font-weight: 400;
+    background-color: transparent;
+}
+.btn:hover{
+    color: #000;
+}
+.btn:active{
+    border: solid #757575;
+    background-color: trasn;
+}
+.restore-pass{
+    display: flex;
+        justify-content: end;
+        margin-top: 10px;
+    color: #000;
+    text-decoration: none;
+}
+.restore-pass:hover{
+      color: #000000cb;
+}
+.restore-pass:active{
+    color: #4f4f57;
+}
+.login-with_socials{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+
+}
+.login-with_socials h3{
+    margin: 10px 0px;
+    font-weight: 400;
+}
+.socials{
+    display: flex;
+    justify-content: start;
+    gap: 20px;
+}
+.box{
+    width: 146px;
+    height: 48px;
+    border: 1px solid #000;
+    border-radius: 10px;
+    text-align: center;
+    line-height: 48px;
+    cursor: pointer;
+    transition: 0.2s ;
+}
+.box:hover{
+ scale: 1.05;
+}
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.theme-btn{
+    font-size: 16px;
+    cursor: pointer;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent;
+
+   
+}
+.theme-btn img{
+    width: 30px;
+    transition: transform 0.3s;
+}
+
+body.dark {
+    background-color:#000;
+    color:#fff;
+}
+body.dark .btn{
+    color: rgba(255,255,255,0.75);
+    border: 2px solid rgba(255,255,255,0.7);
+}
+body.dark .btn:active{
+
+    border: 2px solid rgba(255, 255, 255, 0.6);
+}
+body.dark .restore-pass{
+    color: rgba(255, 255, 255, 0.7);
+}
+body.dark .restore-pass:active{
+    color: rgba(255,255,255,0.6);
+}
+body.dark .box{
+     border: 1px solid rgba(255,255,255,0.7);
+}
+body.dark .checkbox-container p{
+    color: rgba(255,255,255,0.6);
+}
+body.dark .checkmark::after{
+    background-color: #ccc;
+}
+body.dark .right-card__form input{
+    border-bottom: 2px solid #ccc;
+}
+body.dark label{
+    color: rgba(255,255,255,0.6);
+}
+body.dark input::placeholder{
+    color: rgba(255,255,255,0.6);
+}
+body.dark input {
+    color: #fff;
+}
+/* 1200px */
+@media only screen and (max-width: 1200px){
+    .container{
+        width: 95%;
+    }
+
+}
+/* 900px */
+@media only screen and (max-width: 900px){
+    .left-card{
+        display: none;
+    }
+    .container{
+        width: 80%;
+    }
+    .right-card{
+        border-radius:20px ;
+        border-left: 2px solid rgba(255, 255, 255, 0.5);
+        width: 100%;
+    }
+    .login-with_socials h3{
+        text-align: center;
+    }
+    .socials{
+        justify-content: center;
+    }
+}
+
+/*600px */
+@media only screen and (max-width: 600px) {
+   .left-card{
+    display: none;
+   }
+
+   .container{
+    height: 650px;
+    width: 90%;
+
+   }
+   .right-card{
+    border-radius: 20px;
+    border-left: 2px solid rgba(255, 255, 255, 0.5);
+    width: 100%;
+    padding: 40px;
+   }
+   .socials{
+    gap: 10px;
+   }
+
+
+}
+/* 430px */
+@media only screen and (max-width: 430px){
+    .btn{
+        height: 60px;
+    }
+    .container{
+        height: 630px;
+    }
+    .right-card{
+        padding: 30px;
+    }
+    .label{
+         margin-top: 20px;
+         margin-bottom: 5px;
+    }
+}
+/* 390px */
+@media only screen and (max-width: 390px){
+    .container{
+        height: 580px;
+    }
+    .right-card{
+      padding: 25px;
+    }
+  
+}

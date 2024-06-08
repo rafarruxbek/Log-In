@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="./Icon/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./Icon/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="./icon/favicon-16x16.png"
+    />
+    <link rel="manifest" href="/site.webmanifest" />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="script.js"></script>
+    <title>RX.</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="left-card">
+        <div class="welcome">
+          <h3>Welcome!</h3>
+        </div>
+        <div class="logo">
+          <h1>RX.</h1>
+        </div>
+        <div class="register">
+          <p>Not a member yet?</p>
+          <a href="#">Register Now</a>
+        </div>
+      </div>
+      <div class="right-card">
+        <div class="form">
+          <div class="header">
+            <h2 class="form-name">Log in</h2>
+
+            <div class="theme-toggle">
+              <button id="themeSwitch" class="theme-btn themeSwitch">
+                 <img id="themeIcon" src="sun.png" alt="Light Theme Icon">
+              </button>
+            </div>
+          </div>
+
+          <form class="right-card__form">
+            <label for="email" class="label">Email or Username</label>
+            <input
+              type="email"
+              name="email"
+              id="email"
+              placeholder="Email or Username"
+              autocomplete="off"
+            />
+            <label for="password" class="label">Password</label>
+            <input
+              type="password"
+              name="password"
+              id="password"
+              placeholder="Password"
+              autocomplete="off"
+            />
+            <label class="checkbox-container">
+              <input type="checkbox" id="keepLoggedIn" />
+              <span class="checkmark"></span>
+              <p>Keep me logged in</p>
+            </label>
+
+            <button class="btn">Log in now</button>
+          </form>
+          <a href="#" class="restore-pass">Forgot your password?</a>
+        </div>
+        <div class="login-with_socials">
+          <h3>Or sign in width</h3>
+          <div class="socials">
+            <div class="box">Google</div>
+            <div class="box">Apple</div>
+            <div class="box">Facebook</div>
+          </div>
+        </div>
+      </div>
+    </div>
+       <script src="script.js"></script>
+  </body>
+</html>
